@@ -1,4 +1,4 @@
-import useRouteComponent from "./RouteComponent";
+import useRouteComponent from "../Hooks/useRouteComponent";
 import { createElement } from "react";
 import {Route, Routes} from "react-router-dom"
 
