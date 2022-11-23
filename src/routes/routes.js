@@ -1,5 +1,8 @@
 const PAGE_LIST = [
     {
+        path: '/'
+    },
+    {
         path: '/test1'
     },
     {
