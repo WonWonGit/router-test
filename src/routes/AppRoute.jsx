@@ -18,7 +18,8 @@ const AppRoute = () =>{
     return (
         <>
         {
-            
+            isExist.length === 0 ?
+            <PageRoute path={pathname} /> :
             PAGE_LIST.map(({path}, index) => {  
                 const match = matchPath(path, pathname);
                 const isActive = match ? true : false;
@@ -27,11 +28,6 @@ const AppRoute = () =>{
                 : 
                 <Fragment key={index}></Fragment>
             })
-        }
-        {
-            isExist.length === 0 ?
-            <PageRoute path={pathname} /> :
-            <></>
         }
       </>
       );
