@@ -7,8 +7,7 @@ const useRouteComponent = (path) => {
 
     useEffect(() => {
         const importModule = async () => {
-            const page = await pageImport(path).then((page) => page.default);
-            console.log(await pageImport(path), page);
+            const page = await pageImport(path).then((page) => page.default).catch(error => setComponent(error));
             setComponent(()=>page);
         };
         

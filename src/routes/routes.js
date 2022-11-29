@@ -10,6 +10,9 @@ const PAGE_LIST = [
     },
     {
         path: '/test2'
+    },
+    {
+        path: '/test2/:id'
     }
 ];
 

@@ -7,8 +7,12 @@ const PageRoute = ({path}) => {
 
     return (
         <Routes>
-        <Route path={path} element={component ? createElement(component) : null}>
-        </Route>
+          {
+            component === undefined ? 
+            <Route path={path} element={<div>404</div>}></Route> 
+            :
+            <Route path={path} element={component ? createElement(component) : null}></Route>
+          }
         </Routes>
     );
   };
