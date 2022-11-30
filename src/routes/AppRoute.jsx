@@ -7,12 +7,7 @@ import { Fragment, useCallback } from "react";
 const AppRoute = () =>{
 
     const pathname = window.location.pathname;
-
-    const exist = useCallback((pathname)=>{
-        return PAGE_LIST.filter(({path}) => matchPath(path, pathname));
-    }, []);
-
-    const isExist = exist(pathname);
+    const isExist = PAGE_LIST.filter(({path}) => matchPath(path, pathname))
 
 
     return (
